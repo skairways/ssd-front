@@ -1,0 +1,30 @@
+{
+  "name": "ssd-front",
+  "version": "1.0.0",
+  "description": "SSD front templates",
+  "main": "dist/index.js",
+  "bin": {
+    "ssd-front": "./dist/index.js"
+  },
+  "scripts": {
+    "dev": "npx nodemon",
+    "build": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "skairways",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.5.6",
+    "commander": "^11.0.0",
+    "figlet": "^1.6.0",
+    "fs-extra": "^11.1.1",
+    "typescript": "^5.2.2"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/inquirer": "^8.0.0",
+    "inquirer": "^8.0.0",
+    "ts-node": "^10.9.1"
+  }
+}

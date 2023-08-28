@@ -1,0 +1,1 @@
+## SSD-FRONT - Alfa version of SSD front templates
