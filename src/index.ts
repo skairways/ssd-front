@@ -52,7 +52,7 @@ const filterOnCopy = (src:string, dest:string) => {
 };
 
 function reactTemplate(folderName: string) {
-  const source = "/Users/sultonbeknazarov/Documents/ssd/ssd-front/src/templates/react";
+  const source = "https://github.com/skairways/ssd-front/tree/main/src/templates/react";
   const destination = `./${folderName}`;
 
   fsExtra
@@ -70,7 +70,7 @@ function reactTemplate(folderName: string) {
 }
 
 function nextTemplate(folderName: string) {
-  const source = "/Users/sultonbeknazarov/Documents/ssd/ssd-front/src/templates/next";
+  const source = "https://github.com/skairways/ssd-front/tree/main/src/templates/next";
   const destination = `./${folderName}`;
 
   fsExtra
