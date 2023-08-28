@@ -23,6 +23,7 @@
     "commander": "^11.0.0",
     "figlet": "^1.6.0",
     "fs-extra": "^11.1.1",
+    "ssd-front": "^1.0.0",
     "typescript": "^5.2.2"
   },
   "devDependencies": {
