@@ -31,10 +31,10 @@ function chooseTemplate(folderName) {
         .then((answers) => {
         switch (answers.template) {
             case types_1.TemplatesEnum.REACT:
-                reactTemplate(folderName, types_1.TemplatesEnum.REACT);
+                generateTemplate(folderName, types_1.TemplatesEnum.REACT);
                 break;
             case types_1.TemplatesEnum.NEXT:
-                reactTemplate(folderName, types_1.TemplatesEnum.NEXT);
+                generateTemplate(folderName, types_1.TemplatesEnum.NEXT);
                 break;
             default:
                 break;
@@ -44,7 +44,7 @@ function chooseTemplate(folderName) {
 const filterOnCopy = (src, dest) => {
     return !src.includes("node_modules");
 };
-function reactTemplate(folderName, templateName) {
+function generateTemplate(folderName, templateName) {
     const source = "skairways/ssd-front";
     const destination = `./${folderName}`;
     download(source, "temp", function (err) {
@@ -75,17 +75,5 @@ function reactTemplate(folderName, templateName) {
             }
         });
     }
-}
-function nextTemplate(folderName) {
-    const source = "skairways/ssd-front/tree/main/src/templates/next";
-    const destination = `./${folderName}`;
-    fsExtra
-        .copy(source, destination, { filter: filterOnCopy })
-        .then(() => {
-        console.log("React template created successfully!");
-    })
-        .catch((err) => {
-        console.error(err);
-    });
 }
 //# sourceMappingURL=index.js.map
