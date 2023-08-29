@@ -57,7 +57,7 @@ function generateTemplate(folderName, templateName) {
     return __awaiter(this, void 0, void 0, function* () {
         const source = "skairways/ssd-front";
         const destination = `./${folderName}`;
-        yield download(source, "temp", function (err) {
+        yield download(source, "tmp", function (err) {
             if (err) {
                 console.error(err);
             }
@@ -68,7 +68,7 @@ function generateTemplate(folderName, templateName) {
         function copyDirectory() {
             return __awaiter(this, void 0, void 0, function* () {
                 yield fsExtra
-                    .copy(`temp/src/templates/${templateName}`, destination, {
+                    .copy(`tmp/src/templates/${templateName}`, destination, {
                     filter: filterOnCopy,
                 })
                     .then(() => {
@@ -82,7 +82,7 @@ function generateTemplate(folderName, templateName) {
         }
         function cleanup() {
             return __awaiter(this, void 0, void 0, function* () {
-                yield fsExtra.remove("temp", function (err) {
+                yield fsExtra.remove("tmp", function (err) {
                     if (err) {
                         console.error(err);
                     }
