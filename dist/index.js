@@ -6,7 +6,6 @@ const fsExtra = require("fs-extra");
 const figlet = require("figlet");
 const inquirer = require("inquirer");
 const download = require("download-git-repo");
-const copyTemplateDir = require("copy-template-dir");
 console.log(figlet.textSync("SSD-FRONT"));
 inquirer
     .prompt([
