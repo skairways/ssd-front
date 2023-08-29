@@ -35,11 +35,11 @@ function chooseTemplate(folderName: string) {
     .then((answers: Answers) => {
       switch (answers.template) {
         case TemplatesEnum.REACT:
-          reactTemplate(folderName);
+          generateTemplate(folderName, TemplatesEnum.REACT);
           break;
 
         case TemplatesEnum.NEXT:
-          nextTemplate(folderName);
+          generateTemplate(folderName, TemplatesEnum.NEXT);
           break;
 
         default:
@@ -52,7 +52,7 @@ const filterOnCopy = (src: string, dest: string) => {
   return !src.includes("node_modules");
 };
 
-function reactTemplate(folderName: string) {
+function generateTemplate(folderName: string, templateName: TemplatesEnum) {
   const source = "skairways/ssd-front";
   const destination = `./${folderName}`;
 
@@ -66,9 +66,11 @@ function reactTemplate(folderName: string) {
 
   function copyDirectory() {
     fsExtra
-      .copy("temp/src/templates/react", destination, { filter: filterOnCopy })
+      .copy(`temp/src/templates/${templateName}`, destination, {
+        filter: filterOnCopy,
+      })
       .then(() => {
-        console.log("React template created successfully!");
+        console.log(`${templateName} template created successfully!`);
         cleanup();
       })
       .catch((err: Error) => {
@@ -80,21 +82,7 @@ function reactTemplate(folderName: string) {
     fsExtra.remove("temp", function (err: Error) {
       if (err) {
         console.error(err);
-      } 
+      }
     });
   }
-}
-
-function nextTemplate(folderName: string) {
-  const source = "skairways/ssd-front/tree/main/src/templates/next";
-  const destination = `./${folderName}`;
-
-  fsExtra
-    .copy(source, destination, { filter: filterOnCopy })
-    .then(() => {
-      console.log("React template created successfully!");
-    })
-    .catch((err: Error) => {
-      console.error(err);
-    });
 }
