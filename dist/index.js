@@ -1,5 +1,14 @@
 #! /usr/bin/env node
 "use strict";
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 const types_1 = require("./types");
 const fsExtra = require("fs-extra");
@@ -45,35 +54,41 @@ const filterOnCopy = (src, dest) => {
     return !src.includes("node_modules");
 };
 function generateTemplate(folderName, templateName) {
-    const source = "skairways/ssd-front";
-    const destination = `./${folderName}`;
-    download(source, "temp", function (err) {
-        if (err) {
-            console.error(err);
-        }
-        else {
-            copyDirectory();
-        }
-    });
-    function copyDirectory() {
-        fsExtra
-            .copy(`temp/src/templates/${templateName}`, destination, {
-            filter: filterOnCopy,
-        })
-            .then(() => {
-            console.log(`${templateName} template created successfully!`);
-            cleanup();
-        })
-            .catch((err) => {
-            console.error(err);
-        });
-    }
-    function cleanup() {
-        fsExtra.remove("temp", function (err) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const source = "skairways/ssd-front";
+        const destination = `./${folderName}`;
+        yield download(source, "temp", function (err) {
             if (err) {
                 console.error(err);
             }
+            else {
+                copyDirectory();
+            }
         });
-    }
+        function copyDirectory() {
+            return __awaiter(this, void 0, void 0, function* () {
+                yield fsExtra
+                    .copy(`temp/src/templates/${templateName}`, destination, {
+                    filter: filterOnCopy,
+                })
+                    .then(() => {
+                    console.log(`${templateName} template created successfully!`);
+                    cleanup();
+                })
+                    .catch((err) => {
+                    console.error(err);
+                });
+            });
+        }
+        function cleanup() {
+            return __awaiter(this, void 0, void 0, function* () {
+                yield fsExtra.remove("temp", function (err) {
+                    if (err) {
+                        console.error(err);
+                    }
+                });
+            });
+        }
+    });
 }
 //# sourceMappingURL=index.js.map

@@ -52,11 +52,11 @@ const filterOnCopy = (src: string, dest: string) => {
   return !src.includes("node_modules");
 };
 
-function generateTemplate(folderName: string, templateName: TemplatesEnum) {
+async function generateTemplate(folderName: string, templateName: TemplatesEnum) {
   const source = "skairways/ssd-front";
   const destination = `./${folderName}`;
 
-  download(source, "temp", function (err: Error) {
+  await download(source, "tmp", function (err: Error) {
     if (err) {
       console.error(err);
     } else {
@@ -64,9 +64,9 @@ function generateTemplate(folderName: string, templateName: TemplatesEnum) {
     }
   });
 
-  function copyDirectory() {
-    fsExtra
-      .copy(`temp/src/templates/${templateName}`, destination, {
+  async function copyDirectory() {
+    await fsExtra
+      .copy(`tmp/src/templates/${templateName}`, destination, {
         filter: filterOnCopy,
       })
       .then(() => {
@@ -78,8 +78,8 @@ function generateTemplate(folderName: string, templateName: TemplatesEnum) {
       });
   }
 
-  function cleanup() {
-    fsExtra.remove("temp", function (err: Error) {
+  async function cleanup() {
+    await fsExtra.remove("tmp", function (err: Error) {
       if (err) {
         console.error(err);
       }
