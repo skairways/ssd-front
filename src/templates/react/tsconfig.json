@@ -21,7 +21,7 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Module paths */
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "@src/*": ["src/*"],
       "@app/*": ["src/app/*"],
@@ -37,7 +37,7 @@
       "@entities/*": ["src/entities/*"],
       "@widgets/*": ["src/widgets/*"],
       "@assets/*": ["src/assets/*"]
-  },
+    }
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

@@ -1,6 +1,6 @@
 {
   "name": "ssd-front",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "SSD front templates",
   "main": "dist/index.js",
   "bin": {

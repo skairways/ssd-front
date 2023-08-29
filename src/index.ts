@@ -60,7 +60,6 @@ function reactTemplate(folderName: string) {
     if (err) {
       console.error(err);
     } else {
-      console.log("React template created successfully!");
       copyDirectory();
     }
   });
@@ -69,7 +68,7 @@ function reactTemplate(folderName: string) {
     fsExtra
       .copy("temp/src/templates/react", destination, { filter: filterOnCopy })
       .then(() => {
-        console.log("Directory copied successfully!");
+        console.log("React template created successfully!");
         cleanup();
       })
       .catch((err: Error) => {
@@ -81,9 +80,7 @@ function reactTemplate(folderName: string) {
     fsExtra.remove("temp", function (err: Error) {
       if (err) {
         console.error(err);
-      } else {
-        console.log("Temporary directory removed!");
-      }
+      } 
     });
   }
 }
