@@ -1,6 +1,6 @@
 {
   "name": "ssd-front",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "SSD front templates",
   "main": "dist/index.js",
   "bin": {
@@ -21,9 +21,11 @@
   "dependencies": {
     "@types/node": "^20.5.6",
     "commander": "^11.0.0",
+    "copy-template-dir": "^1.4.0",
+    "download-git-repo": "^3.0.2",
     "figlet": "^1.6.0",
     "fs-extra": "^11.1.1",
-    "inquirer": "^9.2.10",
+    "inquirer": "8.0.0",
     "ssd-front": "^1.0.0",
     "typescript": "^5.2.2"
   },

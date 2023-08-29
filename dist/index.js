@@ -5,6 +5,8 @@ const types_1 = require("./types");
 const fsExtra = require("fs-extra");
 const figlet = require("figlet");
 const inquirer = require("inquirer");
+const download = require("download-git-repo");
+const copyTemplateDir = require("copy-template-dir");
 console.log(figlet.textSync("SSD-FRONT"));
 inquirer
     .prompt([
@@ -41,22 +43,44 @@ function chooseTemplate(folderName) {
     });
 }
 const filterOnCopy = (src, dest) => {
-    return !src.includes('node_modules');
+    return !src.includes("node_modules");
 };
 function reactTemplate(folderName) {
-    const source = "https://github.com/skairways/ssd-front/tree/main/src/templates/react";
+    const source = "skairways/ssd-front";
     const destination = `./${folderName}`;
-    fsExtra
-        .copy(source, destination, { filter: filterOnCopy })
-        .then(() => {
-        console.log("React template created successfully!");
-    })
-        .catch((err) => {
-        console.error(err);
+    download(source, "temp", function (err) {
+        if (err) {
+            console.error(err);
+        }
+        else {
+            console.log("React template created successfully!");
+            copyDirectory();
+        }
     });
+    function copyDirectory() {
+        fsExtra
+            .copy("temp/src/templates/react", destination, { filter: filterOnCopy })
+            .then(() => {
+            console.log("Directory copied successfully!");
+            cleanup();
+        })
+            .catch((err) => {
+            console.error(err);
+        });
+    }
+    function cleanup() {
+        fsExtra.remove("temp", function (err) {
+            if (err) {
+                console.error(err);
+            }
+            else {
+                console.log("Temporary directory removed!");
+            }
+        });
+    }
 }
 function nextTemplate(folderName) {
-    const source = "https://github.com/skairways/ssd-front/tree/main/src/templates/next";
+    const source = "skairways/ssd-front/tree/main/src/templates/next";
     const destination = `./${folderName}`;
     fsExtra
         .copy(source, destination, { filter: filterOnCopy })
