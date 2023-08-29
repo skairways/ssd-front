@@ -16,7 +16,7 @@ inquirer
     },
 ])
     .then((answers) => {
-    chooseTemplate(answers.folderName);
+    chooseTemplate(answers.folderName || "template");
 });
 function chooseTemplate(folderName) {
     inquirer
@@ -52,7 +52,6 @@ function reactTemplate(folderName) {
             console.error(err);
         }
         else {
-            console.log("React template created successfully!");
             copyDirectory();
         }
     });
@@ -60,7 +59,7 @@ function reactTemplate(folderName) {
         fsExtra
             .copy("temp/src/templates/react", destination, { filter: filterOnCopy })
             .then(() => {
-            console.log("Directory copied successfully!");
+            console.log("React template created successfully!");
             cleanup();
         })
             .catch((err) => {
@@ -71,9 +70,6 @@ function reactTemplate(folderName) {
         fsExtra.remove("temp", function (err) {
             if (err) {
                 console.error(err);
-            }
-            else {
-                console.log("Temporary directory removed!");
             }
         });
     }

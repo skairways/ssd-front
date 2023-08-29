@@ -19,7 +19,7 @@ inquirer
     },
   ])
   .then((answers: Answers) => {
-    chooseTemplate(answers.folderName);
+    chooseTemplate(answers.folderName || "template");
   });
 
 function chooseTemplate(folderName: string) {
