@@ -6,7 +6,15 @@ This template provides a setup to work with middle sized projects.
 
 ## Start a project:
 
+```
+   pnpm i && pnpm dev
+```
 
+## Storybook:
+
+```
+   pnpm storybook
+```
 
 ### Project urls:
 
@@ -19,10 +27,10 @@ PROD  - https://your-prod.com
 [Rules for version control and branching in Git](https://habr.com/ru/articles/106912/) 
 
 ```
-   ✨ Features ->    feat -[ticket-number]   - feat-ABC123
-   🐛 Hotfixes ->  hotfix -[ticket-number]   - hotfix-ABC123
-   💥 Fixes    ->     fix -[ticket-number]   - fix-ABC123
-   🚀 Releases -> release -[release-version] - release-1.6
+   ✨ Features ->    feat-[ticket-number]   - feat-ABC123
+   🐛 Fixes    ->     fix-[ticket-number]   - fix-ABC123
+   💥 Hotfixes ->  hotfix-[ticket-number]   - hotfix-ABC123
+   🚀 Releases -> release-[release-version] - release-1.6
 ```
 
 ### Patterns for commit:
