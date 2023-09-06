@@ -1,18 +1,44 @@
-# React + TypeScript + Vite
+# React (TS + Vite) Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![](https://miro.medium.com/v2/resize:fit:400/format:webp/1*A4AhcQBucS8bLpNRq3HCLg.png)
 
-## Expanding the ESLint configuration
+This template provides a setup to work with middle sized projects.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Start a project:
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+
+### Project urls:
+
+LOCAL - http://localhost:5173/
+DEV   - https://dev-your-prod.com
+PROD  - https://your-prod.com
+
+### Prefixes for branching:
+
+[Rules for version control and branching in Git](https://habr.com/ru/articles/106912/) 
+
+```
+   ✨ Features ->    feat -[ticket-number]   - feat-ABC123
+   🐛 Hotfixes ->  hotfix -[ticket-number]   - hotfix-ABC123
+   💥 Fixes    ->     fix -[ticket-number]   - fix-ABC123
+   🚀 Releases -> release -[release-version] - release-1.6
+```
+
+### Patterns for commit:
+##### Feature
+```
+   "✨[ABC-123] feat (Added filter)"
+```
+##### Bug Fix
+```
+   "🐛[ABC-123] fix (Fixed filter)"
+```
+##### Hot Fix
+```
+   "💥[ABC-123] hotfix (Saved company🦸)"
+```
+##### Release
+```
+   "🚀[ABC-123] rel (Releasing trash)"
 ```
