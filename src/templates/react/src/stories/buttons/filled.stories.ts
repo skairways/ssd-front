@@ -1,34 +1,24 @@
 import type { Meta, StoryObj } from "@storybook/react"
 
-import { StyledButton } from "@shared/ui/button"
+import { FilledButton } from "@src/shared/ui/buttons"
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-	title: "Example/Button",
-	component: StyledButton,
+	title: "ui-kit/Buttons",
+	component: FilledButton,
 	parameters: {
 		layout: "centered",
 	},
 	// This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
 	tags: ["autodocs"],
-} satisfies Meta<typeof StyledButton>
+} satisfies Meta<typeof FilledButton>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary: Story = {
+export const Filled: Story = {
 	args: {
-		children: "Primary Button",
-		color: "violet",
-		radius: "25px",
-	},
-}
-export const Secondary: Story = {
-	args: {
-		children: "Secondary Button",
-		color: "yellow",
-		radius: "15px",
-		compact: true,
+		children: "Button",
 	},
 }
