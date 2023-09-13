@@ -1,19 +1,18 @@
 import { Suspense } from "react"
 import { Navigate, Route, Routes } from "react-router-dom"
 
-import { Loader } from "@components/Loader"
-import Login from "@views/login"
-import MonitoringPage from "@views/monitoring"
+import HomePage from "@pages/home"
 import NotFoundPage from "@pages/not-found"
 import { AppPages } from "@src/shared/constants/routes"
+import { RocketLoader } from "@src/shared/ui/loaders"
 
 export const AppRoutes = () => {
 	return (
-		<Suspense fallback={<Loader />}>
+		<Suspense fallback={<RocketLoader />}>
 			<Routes>
-				<Route path={AppPages.RootPage} element={<Login />} />
+				<Route path={AppPages.RootPage} element={<HomePage />} />
 
-				<Route path={AppPages.AboutPage} element={<MonitoringPage />} />
+				<Route path={AppPages.AboutPage} element={<NotFoundPage />} />
 
 				<Route path={AppPages.NotFoundPage} element={<NotFoundPage />} />
 

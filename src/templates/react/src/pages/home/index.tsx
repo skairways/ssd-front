@@ -1,6 +1,6 @@
 import styles from "./index.module.scss"
 
-export const App = () => {
+const HomePage = () => {
 	return (
 		<div className={styles.wrapper}>
 			<div>
@@ -16,3 +16,5 @@ export const App = () => {
 		</div>
 	)
 }
+
+export default HomePage

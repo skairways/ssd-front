@@ -1,13 +1,13 @@
 .button {
-	color: #12B76A;
-	border-color: #12B76A;
+	color: #12b76a;
+	border-color: #12b76a;
 
 	&:hover {
-		background-color: #F6FEF9;
+		background-color: #f6fef9;
 	}
-	
+
 	&:disabled {
-		color: #D0D5DD;
-		border-color: #E4E7EC;
+		color: #d0d5dd;
+		border-color: #e4e7ec;
 	}
 }
