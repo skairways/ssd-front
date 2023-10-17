@@ -1,9 +1,9 @@
-import { FC } from "react"
 import { Button } from "@mantine/core"
 import cx from "clsx"
-import { IStyledButton } from "./types"
+import { FC } from "react"
 
-import styles from "./index.module.scss"
+import s from "./styles.module.scss"
+import { IStyledButton } from "./types"
 
 export const FilledButton: FC<IStyledButton> = ({
 	children,
@@ -11,7 +11,7 @@ export const FilledButton: FC<IStyledButton> = ({
 	...props
 }) => {
 	return (
-		<Button className={cx(styles.button, className)} radius="8px" {...props}>
+		<Button className={cx(s.button, className)} radius="8px" {...props}>
 			{children}
 		</Button>
 	)

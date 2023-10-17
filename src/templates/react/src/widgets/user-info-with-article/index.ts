@@ -1,0 +1,1 @@
+export { UserInfoWithArticle } from "./ui"

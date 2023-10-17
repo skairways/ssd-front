@@ -1,7 +1,8 @@
-import { FilledButton } from "@src/shared/ui/buttons"
 import { useNavigate } from "react-router-dom"
 
-import styles from "./index.module.scss"
+import { FilledButton } from "@/shared/ui/buttons"
+
+import s from "./styles.module.scss"
 import { BurgerIcon } from "./ui"
 
 const NotFoundPage = () => {
@@ -11,9 +12,9 @@ const NotFoundPage = () => {
 	}
 
 	return (
-		<div className={styles.wrapper}>
+		<div className={s.wrapper}>
 			<BurgerIcon />
-			<div className={styles.text}>404 Page Not Found</div>
+			<div className={s.text}>404 Page Not Found</div>
 			<FilledButton onClick={handleReturn}>Return Back</FilledButton>
 		</div>
 	)

@@ -1,9 +1,9 @@
-import { FC } from "react"
 import { Button } from "@mantine/core"
 import cx from "clsx"
-import { IStyledButton } from "./types"
+import { FC } from "react"
 
-import styles from "./index.module.scss"
+import s from "./styles.module.scss"
+import { IStyledButton } from "./types"
 
 export const OutlineButton: FC<IStyledButton> = ({
 	children,
@@ -14,7 +14,7 @@ export const OutlineButton: FC<IStyledButton> = ({
 		<Button
 			variant="outline"
 			radius="8px"
-			className={cx(styles.button, className)}
+			className={cx(s.button, className)}
 			{...props}
 		>
 			{children}

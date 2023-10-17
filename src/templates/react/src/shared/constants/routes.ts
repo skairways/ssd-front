@@ -1,5 +1,5 @@
 export enum AppPages {
 	RootPage = "/",
-	AboutPage = "/about",
+	ExamplePage = "/example",
 	NotFoundPage = "/404",
 }

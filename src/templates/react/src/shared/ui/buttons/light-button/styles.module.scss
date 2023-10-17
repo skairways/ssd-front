@@ -1,0 +1,15 @@
+.button {
+	color: #12b76a;
+	background-color: #ecfdf3;
+	font-weight: 500;
+
+	&:hover {
+		background-color: #d1fadf;
+		color: #039855;
+	}
+
+	&:disabled {
+		color: #d0d5dd;
+		background-color: #f2f4f7;
+	}
+}

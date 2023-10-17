@@ -1,0 +1,19 @@
+@import "@styles/media";
+
+.wrapper {
+	padding: 2rem;
+	border: 1px dashed #000;
+	height: max-content;
+	display: flex;
+	gap: 15px;
+
+	@include xs {
+		padding: 15px;
+		flex-direction: column;
+		width: 100%;
+	}
+}
+
+.userInput {
+	padding: 0.5rem;
+}

@@ -1,5 +1,6 @@
 import compose from "compose-function"
-import withRouter from "./withRouter"
-import withReactquery from "./withReactQuery"
 
-export const withHocs = compose(withRouter, withReactquery)
+import { WithReactquery } from "./with-react-query"
+import { WithRouter } from "./with-router"
+
+export const withHocs = compose(WithRouter, WithReactquery)

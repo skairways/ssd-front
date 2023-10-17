@@ -1,5 +1,5 @@
-import { PropsWithChildren } from "react"
 import { ButtonProps } from "@mantine/core"
+import { PropsWithChildren } from "react"
 
 type DefaultProps = PropsWithChildren &
 	ButtonProps &
