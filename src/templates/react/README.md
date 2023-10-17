@@ -50,3 +50,8 @@ PROD  - https://your-prod.com
 ```
    "🚀[ABC-123] rel (Releasing trash)"
 ```
+
+![](https://user-images.githubusercontent.com/42924400/111057664-460cb500-849a-11eb-89ea-a60bca318485.png)
+
+
+https://www.youtube.com/watch?v=VtWkSCZX0Ec&list=PLC3y8-rFHvwjTELCrPrcZlo6blLBUspd2&index=1

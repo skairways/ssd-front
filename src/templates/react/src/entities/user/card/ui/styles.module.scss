@@ -1,0 +1,24 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	cursor: pointer;
+	padding: 8px;
+	border-radius: 8px;
+	transition: background 0.5s;
+
+	&:hover {
+		background-color: cadetblue;
+	}
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+}
+
+.name {
+	font-weight: 700;
+}

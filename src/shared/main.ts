@@ -19,7 +19,7 @@ export async function startInquiry() {
     ])
     .then((answers: Answers) => {
       return chooseTemplate(answers.folderName || "template");
-    });
+    }); 
 }
 
 async function chooseTemplate(folderName: string) {
