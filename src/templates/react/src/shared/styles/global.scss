@@ -1,37 +1,37 @@
 @import "@styles/media";
 
 :root {
-	font-family: Inter, Helvetica, sans-serif;
+  font-family: Inter, Helvetica, sans-serif;
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .container {
-	max-width: 1320px;
-	margin: 0 auto;
-	padding: 0 15px;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
 
-	@include xl {
-		max-width: 1140px;
-	}
+  @include xl {
+    max-width: 1140px;
+  }
 
-	@include lg {
-		max-width: 960px;
-	}
+  @include lg {
+    max-width: 960px;
+  }
 
-	@include lg {
-		max-width: 720px;
-	}
+  @include lg {
+    max-width: 720px;
+  }
 
-	@include lg {
-		max-width: 960px;
-	}
+  @include lg {
+    max-width: 960px;
+  }
 }
