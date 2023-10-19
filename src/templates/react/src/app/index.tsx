@@ -1,20 +1,7 @@
-import { ToastContainer } from "react-toastify"
-
-import { AppRoutes } from "@/pages"
+import { withHocs } from "@/app/lib/with-hocs"
 
 import "@/shared/styles/app.scss"
 
-import { withHocs } from "./providers"
+const App = withHocs(() => {})
 
-const App = () => {
-	return (
-		<>
-			<AppRoutes />
-			<ToastContainer limit={2} position="bottom-right" />
-		</>
-	)
-}
-
-const WrappedApp = withHocs(App)
-
-export default WrappedApp
+export default App

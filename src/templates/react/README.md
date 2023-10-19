@@ -11,6 +11,12 @@
 - [storybook](https://storybook.js.org/docs/react/get-started/install/)
 - [mantine](https://v6.mantine.dev/)
 
+## Important initialize git first:
+
+```
+   git init
+```
+
 ## Start a project:
 
 ```
