@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+/storybook.log
+
+# node packet menager
+/pnpm-lock.yaml
 
 # testing
 /coverage
