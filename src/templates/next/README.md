@@ -1,40 +1,75 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React (TS + Vite) Template
 
-## Getting Started
+![](https://miro.medium.com/v2/resize:fit:400/format:webp/1*A4AhcQBucS8bLpNRq3HCLg.png)
 
-First, run the development server:
+- [next](https://nextjs.org/)
+- [Typescript](https://www.typescriptlang.org/) - [cheat-sheet](https://www.typescriptlang.org/cheatsheets)
+- [webpack](https://webpack.js.org/)
+- [axios](https://axios-http.com/docs/intro)
+- [swr](https://swr.vercel.app/) - [videos](https://youtu.be/7y1cp8mm45c)
+- [zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
+- [storybook](https://storybook.js.org/docs/react/get-started/install/)
+- [mantine](https://v6.mantine.dev/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Important initialize git first:
+
+```
+   git init
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Start a project:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+   pnpm i && pnpm dev
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Project urls:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+LOCAL - http://localhost:5173/
+DEV - https://dev-your-prod.com
+PROD - https://your-prod.com
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Project structure:
 
-## Learn More
+Architecture - [Feature-Sliced-Design](https://feature-sliced.design/ru/docs)
 
-To learn more about Next.js, take a look at the following resources:
+![](https://feature-sliced.design/ru/assets/images/visual_schema-e826067f573946613dcdc76e3f585082.jpg)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prefixes for branching:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[Rules for version control and branching in Git](https://habr.com/ru/articles/106912/)
 
-## Deploy on Vercel
+```
+   ✨ Features ->    feat-[ticket-number]   - feat-ABC123
+   🐛 Fixes    ->     fix-[ticket-number]   - fix-ABC123
+   💥 Hotfixes ->  hotfix-[ticket-number]   - hotfix-ABC123
+   🚀 Releases -> release-[release-version] - release-1.6
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Patterns for commit:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+##### Feature
+
+```
+   "✨[ABC-123] feat (Added filter)"
+```
+
+##### Bug Fix
+
+```
+   "🐛[ABC-123] fix (Fixed filter)"
+```
+
+##### Hot Fix
+
+```
+   "💥[ABC-123] hotfix (Saved company🦸)"
+```
+
+##### Release
+
+```
+   "🚀[ABC-123] rel (Releasing trash)"
+```
+
+![](https://user-images.githubusercontent.com/42924400/111057664-460cb500-849a-11eb-89ea-a60bca318485.png)
