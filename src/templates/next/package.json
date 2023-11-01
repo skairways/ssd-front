@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install | chmod ug+x .husky/*",
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check ./src",
+    "check-lint": "eslint ./src --ext ts --ext tsx"
   },
   "dependencies": {
     "next": "14.0.1",
