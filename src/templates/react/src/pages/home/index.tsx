@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-import logo from "@/shared/assets/logo.png"
+import logo from "@/shared/assets/images/logo.png"
 import { AppPages } from "@/shared/constants/routes"
 
 import s from "./styles.module.scss"

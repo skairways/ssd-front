@@ -6,7 +6,7 @@ import { UserArticle } from "@/widgets/user-article"
 
 import s from "./styles.module.scss"
 
-export const ArticlePage: FC = () => {
+const ArticlePage: FC = () => {
 	const { id } = useParams()
 
 	return (
@@ -21,3 +21,5 @@ export const ArticlePage: FC = () => {
 		</div>
 	)
 }
+
+export default ArticlePage
