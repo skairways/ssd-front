@@ -12,10 +12,6 @@
 	"parser": "@typescript-eslint/parser",
 	"plugins": ["react", "react-hooks", "prettier", "import"],
 	"rules": {
-		// "react-refresh/only-export-components": [
-		// 	"warn",
-		// 	{ "allowConstantExport": true }
-		// ],
 		"react-refresh/only-export-components": "off", // потому что я думаю это свойство не работаеть в ssr  
 		"react/react-in-jsx-scope": "off",
 		"react/display-name": "off"
