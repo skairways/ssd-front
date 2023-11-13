@@ -1,5 +1,3 @@
-import { Button } from "@mantine/core"
-import { NextPageContext } from "next"
 import { Inter } from "next/font/google"
 import Head from "next/head"
 
@@ -22,18 +20,11 @@ const HomePage = ({ stars }: { stars: number }) => {
 			<main className={inter.className}>
 				<h1 className={s.wrapper}>HomePage</h1>
 				<FilledButton>test</FilledButton>
-				<Button>knopka</Button>
 				<PagePart />
 				{stars}
 			</main>
 		</>
 	)
-}
-
-HomePage.getInitialProps = async (/* ctx: NextPageContext */) => {
-	const res = await fetch("https://api.github.com/repos/vercel/next.js")
-	const json = await res.json()
-	return { stars: json.stargazers_count }
 }
 
 export default HomePage
