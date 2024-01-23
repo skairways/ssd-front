@@ -2,7 +2,7 @@
 
 The standard way to start a powered SSD project
 
-<img src="./public/terminal.jpeg" width="800">
+<img src="https://skairways.github.io/ssd-front/public/terminal.jpeg" width="800">
 
 ## Usage
 
