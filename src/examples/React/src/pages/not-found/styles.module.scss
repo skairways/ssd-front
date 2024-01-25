@@ -1,0 +1,15 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: white;
+}
+
+.text {
+	color: black;
+	margin-bottom: 30px;
+	font-weight: 700;
+	font-size: 24px;
+}

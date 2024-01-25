@@ -1,0 +1,12 @@
+.button {
+	background-color: #12b76a;
+	font-weight: 500;
+
+	&:hover {
+		background-color: #039855;
+	}
+
+	&:disabled {
+		background-color: #f2f4f7;
+	}
+}

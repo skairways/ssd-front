@@ -1,0 +1,38 @@
+@import "@styles/media";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0 15px;
+
+	@include xl {
+		max-width: 1140px;
+	}
+
+	@include lg {
+		max-width: 960px;
+	}
+
+	@include lg {
+		max-width: 720px;
+	}
+
+	@include lg {
+		max-width: 960px;
+	}
+}
