@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# The commit message passed as argument
+commit_message_file="$1"
+
+# Run your custom commit message checker (JavaScript)
+node - <<EOF
+const fs = require('fs');
+const commit = fs.readFileSync("${commit_message_file}", 'utf-8').trim();
+const template = '[ABS-123] feat (Description)'
+
+const ticketNumberPattern = /^\[[A-Z0-9_-]+-\d+\]/;
+if(!ticketNumberPattern.test(commit)){
+    console.error('\n ❌ Error: Ticket number must match the pattern [PREFIX-number] ❌\n');
+    console.log('\t📝 Template:', template);
+    process.exit(1);
+}
+
+const branchTypePattern = /\]\s+(feat|fix|hotfix|rel)\b\s+\(/i;
+if(!branchTypePattern.test(commit)){
+    console.error('\n❌ Error: Branch type must match the pattern "feat" | "fix" | "hotfix" | "rel" ❌\n');
+    console.log('\t📝 Template:', template);
+    process.exit(1);
+}
+
+const descriptionPattern = /\(.{4,88}\)$/;
+if(!descriptionPattern.test(commit)){
+    console.error('\n❌ Error: Description must have a length between 4 and 88 characters ❌\n');
+    console.log('\t📝 Template:', template);
+    process.exit(1);
+}
+EOF
