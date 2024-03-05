@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate } from "react-router-dom"
+import {createBrowserRouter, Navigate, Outlet} from "react-router-dom"
 
 import ArticlePage from "@/pages/example/id"
 import ExamplePage from "@/pages/example/root"
@@ -9,9 +9,15 @@ import { AppPages } from "@/shared/constants/routes"
 import { ErrorBoundary } from "react-error-boundary";
 import {CodeErrorComponent} from "@/shared/ui/errors";
 
+const ErrorBoundaryLayout = () => (
+	<ErrorBoundary FallbackComponent={CodeErrorComponent}>
+		<Outlet />
+	</ErrorBoundary>
+);
+
 export const router = createBrowserRouter([
 	{
-		element: <ErrorBoundary FallbackComponent={CodeErrorComponent}/>,
+		element: <ErrorBoundaryLayout />,
 		children: [
 			{
 				path: AppPages.RootPage,
