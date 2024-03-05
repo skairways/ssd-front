@@ -11,7 +11,7 @@ import {CodeErrorComponent} from "@/shared/ui/errors";
 
 export const router = createBrowserRouter([
 	{
-		element:   <ErrorBoundary FallbackComponent={CodeErrorComponent}/>,
+		element: <ErrorBoundary FallbackComponent={CodeErrorComponent}/>,
 		children: [
 			{
 				path: AppPages.RootPage,
